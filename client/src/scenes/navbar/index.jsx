@@ -41,6 +41,8 @@ const Navbar = () => {
 
     const fullName = `${user.firstName} ${user.lastName}`;
 
+    //const fullName = `Muntasir Mamun`;
+
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
             <FlexBetween gap="1.75rem">
@@ -56,7 +58,7 @@ const Navbar = () => {
                         },
                     }}
                 >
-                    Sociopedia
+                    FakeBook
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween
