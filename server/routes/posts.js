@@ -13,4 +13,4 @@ router.get("/:userId/posts", verifyToken, getUserPosts);
 /* UPDATE */
 router.get("/:id/posts", verifyToken, likePost);
 
-export default module;
+export default router;

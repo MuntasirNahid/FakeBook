@@ -20,11 +20,11 @@ const postSchema = mongoose.Schema(
         userPictureaPath: String,
         likes: {//all we need to do is to check if the userId exists in this map,values are always true
             //this is for who liked your post
-            type: map,
+            type: Map,
             of: Boolean,
         },
         comments: {
-            types: Array,
+            type: Array,
             default: []
         }
     },

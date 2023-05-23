@@ -14,6 +14,9 @@ import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
+import User from "./models/User.js";
+import Post from "./models/Post.js";
+import { users, posts } from "./data/index.js"
 
 /* Configurations */
 //these are middleware
@@ -65,5 +68,10 @@ mongoose.connect(process.env.MONGO_URL, {
 })
     .then(() => {
         app.listen(PORT, () => console.log(`DB is connected & Server is listening on port ${PORT}`));
+
+        /* ADD DATA ONE TIME MANUALLY FOR CHECKING PURPOSE */
+        // User.insertMany(users);
+        // Post.insertMany(posts);
+
     })
     .catch((error) => console.log(`${error} did not connect`));
